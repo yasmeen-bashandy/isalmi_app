@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Isalmi',
+      debugShowCheckedModeBanner: false,
       // ======= navigation named =======
       routes: {HomeScreen.routeName: (_) => HomeScreen()},
       initialRoute: HomeScreen.routeName,
