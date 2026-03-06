@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
+import 'package:islami_app/model/sura_model.dart';
 
 class SuraItem extends StatelessWidget {
-  const SuraItem({super.key});
+  SuraModel sura;
+  SuraItem(this.sura, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,7 @@ class SuraItem extends StatelessWidget {
           children: [
             SvgPicture.asset(AssetsManager.sura_frame),
             Text(
-              "1",
+              "${sura.number.toString()}",
               style: TextStyle(
                 color: ColorsManager.white,
                 fontSize: 20,
@@ -31,7 +33,7 @@ class SuraItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Al-Fatiha",
+                sura.SuraNameEn,
                 style: TextStyle(
                   color: ColorsManager.white,
                   fontSize: 20,
@@ -39,7 +41,7 @@ class SuraItem extends StatelessWidget {
                 ),
               ),
               Text(
-                "7 Verses",
+                "${sura.versesCount} Verses",
                 style: TextStyle(
                   color: ColorsManager.white,
                   fontSize: 14,
@@ -50,7 +52,7 @@ class SuraItem extends StatelessWidget {
           ),
         ),
         Text(
-          "الفاتحه",
+          sura.SuraNameAr,
           style: TextStyle(
             color: ColorsManager.white,
             fontSize: 20,

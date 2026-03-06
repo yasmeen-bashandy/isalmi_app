@@ -3,8 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
 import 'package:islami_app/core/resourses/strings_manager.dart';
+import 'package:islami_app/model/sura_model.dart';
 import 'package:islami_app/ui/home/tabs/quran/widgets/most_recently_item.dart';
 import 'package:islami_app/ui/home/tabs/quran/widgets/sura_item.dart';
+import 'package:islami_app/model/sura_model.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
@@ -99,14 +101,15 @@ class QuranTab extends StatelessWidget {
               SizedBox(height: 10),
               Expanded(
                 child: ListView.separated(
-                  itemBuilder: (context, index) => SuraItem(),
+                  itemBuilder: (context, index) =>
+                      SuraItem(SuraModel.suras_list[index]),
                   separatorBuilder: (context, index) => Divider(
                     endIndent: 40,
                     indent: 40,
                     color: ColorsManager.white,
                     height: 20,
                   ),
-                  itemCount: 10,
+                  itemCount: SuraModel.suras_list.length,
                 ),
               ),
             ],
