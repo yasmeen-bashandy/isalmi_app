@@ -18,7 +18,7 @@ class SuraItem extends StatelessWidget {
           children: [
             SvgPicture.asset(AssetsManager.sura_frame),
             Text(
-              "${sura.number.toString()}",
+             sura.suraNumber.toString(),
               style: TextStyle(
                 color: ColorsManager.white,
                 fontSize: 20,
@@ -28,6 +28,7 @@ class SuraItem extends StatelessWidget {
           ],
         ),
         SizedBox(width: 24),
+        // here we will use expanded to make the text take all the available space and push the arabic name to the end of the row
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
