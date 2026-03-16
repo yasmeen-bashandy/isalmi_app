@@ -2,8 +2,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
-import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/strings_manager.dart';
+import 'package:islami_app/gen/assets.gen.dart';
 import 'package:islami_app/ui/home/tabs/hadith/hadith_tab.dart';
 import 'package:islami_app/ui/home/tabs/quran/quran_tab.dart';
 import 'package:islami_app/ui/home/tabs/radio/radio_tab.dart';
@@ -53,28 +53,28 @@ class _HomeScreenState extends State<HomeScreen> {
 
         destinations: [
           NavigationDestination(
-            selectedIcon: SvgPicture.asset(AssetsManager.quran_selected),
-            icon: SvgPicture.asset(AssetsManager.quran),
+            selectedIcon: SvgPicture.asset(Assets.images.quranSelected),
+            icon: SvgPicture.asset(Assets.images.quran),
             label: StringManager.quranTab,
           ),
           NavigationDestination(
-            selectedIcon: SvgPicture.asset(AssetsManager.hadith_selected),
-            icon: SvgPicture.asset(AssetsManager.hadith),
+            selectedIcon: SvgPicture.asset(Assets.images.hadithSelected),
+            icon: SvgPicture.asset(Assets.images.hadith),
             label: StringManager.hadithTab,
           ),
           NavigationDestination(
-            selectedIcon: SvgPicture.asset(AssetsManager.sabha_selected),
-            icon: SvgPicture.asset(AssetsManager.sabha),
+            selectedIcon: SvgPicture.asset(Assets.images.sabhaSelected),
+            icon: SvgPicture.asset(Assets.images.sabha),
             label: StringManager.sabhaTab,
           ),
           NavigationDestination(
-            selectedIcon: SvgPicture.asset(AssetsManager.radio_selected),
-            icon: SvgPicture.asset(AssetsManager.radio),
+            selectedIcon: SvgPicture.asset(Assets.images.radioSelected),
+            icon: SvgPicture.asset(Assets.images.radio),
             label: StringManager.radioTab,
           ),
           NavigationDestination(
-            selectedIcon: SvgPicture.asset(AssetsManager.time_selected),
-            icon: SvgPicture.asset(AssetsManager.time),
+            selectedIcon: SvgPicture.asset(Assets.images.timeSelected),
+            icon: SvgPicture.asset(Assets.images.time),
             label: StringManager.timeTab,
           ),
         ],

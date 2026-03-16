@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
 import 'package:islami_app/core/resourses/strings_manager.dart';
+import 'package:islami_app/gen/assets.gen.dart';
 import 'package:islami_app/model/sura_model.dart';
 import 'package:islami_app/ui/home/tabs/quran/widgets/most_recently_item.dart';
 import 'package:islami_app/ui/home/tabs/quran/widgets/sura_item.dart';
-import 'package:islami_app/model/sura_model.dart';
 
 class QuranTab extends StatelessWidget {
   const QuranTab({super.key});
@@ -19,7 +18,7 @@ class QuranTab extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AssetsManager.quran_back),
+          image: AssetImage(Assets.images.quranBack.path),
           fit: BoxFit.fill,
         ),
       ),
@@ -33,7 +32,7 @@ class QuranTab extends StatelessWidget {
               Align(
                 alignment: Alignment.center,
                 child: Image.asset(
-                  AssetsManager.islami_header,
+                  Assets.images.islamiHeader.path,
                   width: screenWidth * 0.7,
                 ),
               ),
@@ -53,7 +52,7 @@ class QuranTab extends StatelessWidget {
                       bottom: 13,
                     ),
                     child: SvgPicture.asset(
-                      AssetsManager.quran,
+                      Assets.images.quran,
                       colorFilter: ColorFilter.mode(
                         ColorsManager.gold,
                         BlendMode.srcIn,

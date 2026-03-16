@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
+import 'package:islami_app/gen/assets.gen.dart';
+// import 'package:islami_app/gen/assets.gen.dart';
 
 class MostRecentlyItem extends StatelessWidget {
   const MostRecentlyItem({super.key});
@@ -48,7 +49,9 @@ class MostRecentlyItem extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset(AssetsManager.most_recent),
+          Image.asset(
+            Assets.images.mostRecent.path,fit: BoxFit.cover,
+          ),
         ],
       ),
     );
