@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:islami_app/core/resourses/assets_manager.dart';
 import 'package:islami_app/core/resourses/colors_manager.dart';
 import 'package:islami_app/gen/assets.gen.dart';
 import 'package:islami_app/model/sura_model.dart';
